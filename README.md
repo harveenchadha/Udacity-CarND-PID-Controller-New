@@ -14,17 +14,45 @@ Components of PID-
 
 # Final Parameters
 
+Information for Tuning Parameters:
+
+Rise time – the time it takes to get from the beginning point to the target point
+
+Overshoot – the amount that is changed too much; the value further than the error
+
+Settling time – the time it takes to settle back down when encountering a change
+
+Steady-state error – the error at the equilibrium
+
+Stability – the “smoothness” of the speed
+
+## Manual Tuning:
+
+
 P - 0.15
 
 I - 0.0005
 
 D - 2.0
 
-I found out this parameters by Manual Tuning. I tried out various combinations of coefficients. In the starting, I set every parameter to zero except Kd(Constant for Propotional Term). I got an oscilating behaviour. 
-[Video for P component Only](./Videos/P_Controller.mp4)
+I found out this parameters by Manual Tuning.  
 
-Then I set the D component with Hit and Trial in such way that the oscillations are now controlled and the car steers correctly on curves. 
-[Video for PD component Only](./Videos/P_D_Controller.mp4)
+The way I tune my constants is as follows:
+
+1. Set Kp, Ki, and Kd to 0. This will disable them for now.
+
+2. Increase Kp until the error is fairly small, but it still gets from the beginning to nearly
+the end quickly enough. [Video for P component Only](./Videos/P_Controller.mp4)
+
+3. Increase Kd until any overshoot you may have is fairly minimal. But be careful with
+Kd – too much will make it overshoot. [Video for PD component Only](./Videos/P_D_Controller.mp4)
+
+4. Increase Ki until any error that is still existing is eliminated. Start with a really small
+number for Ki, even if it is as small as 0.0001 or even smaller.
+
+5. Using the rules of tuning the constants (in the table on the previous page), you can
+change around the constants a little bit to get it working to the best performance.
+
 
 ## Experiment with Throttle Values
 
