@@ -23,10 +23,10 @@ D - 2.0
 I found out this parameters by Manual Tuning. I tried out various combinations of coefficients. In the starting, I set every parameter to zero except Kd(Constant for Propotional Term). I got an oscilating behaviour. 
 [Video for P component Only](./Videos/P_Controller.mp4)
 
-Then I set the D component with Hit and Trial in such way that the oscillations are now controlled and the car steers correctly on curves.
-[Video for PD component Only] (./Videos/P_D_Controller.mp4)
+Then I set the D component with Hit and Trial in such way that the oscillations are now controlled and the car steers correctly on curves. 
+[Video for PD component Only](./Videos/P_D_Controller.mp4)
 
 ## Experiment with Throttle Values
 
 I tried out increasing the throttle to 0.5. The results can be found below.
-[Video for PID Controller with throttle 0.5] (./Videos/P_I_D_Throttle_5.mp4)
+[Video for PID Controller with throttle 0.5](./Videos/P_I_D_Throttle_5.mp4)
