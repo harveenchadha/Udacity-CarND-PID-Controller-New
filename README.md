@@ -12,10 +12,12 @@ Components of PID-
 
 ..* I (Integral Component)- This component accounts for the sum of all CTE's at a point. If the value of I component is too high, then the car oscillates too much and does not tends to pick up speed. **I choose the value of I to be really small.**
 
-# Final Parameters-
+# Final Parameters
 
 P - 0.15
+
 I - 0.0005
+
 D - 2.0
 
 I found out this parameters by Manual Tuning. I tried out various combinations of coefficients. In the starting, I set every parameter to zero except Kd(Constant for Propotional Term). I got an oscilating behaviour. 
@@ -24,7 +26,7 @@ I found out this parameters by Manual Tuning. I tried out various combinations o
 Then I set the D component with Hit and Trial in such way that the oscillations are now controlled and the car steers correctly on curves.
 [Video for PD component Only] (./Videos/P_D_Controller.mp4)
 
-## Experiment with Throttle Values-
+## Experiment with Throttle Values
 
 I tried out increasing the throttle to 0.5. The results can be found below.
 [Video for PID Controller with throttle 0.5] (./Videos/P_I_D_Throttle_5.mp4)
